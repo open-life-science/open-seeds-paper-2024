@@ -55,12 +55,12 @@ The information provided in this form will be shared as it is only with the OLS 
 <Free text>
 
 
-# Cohort-wide calls and assignments
+## Cohort-wide calls and assignments
 
 Assignments and our bi-weekly cohort calls on Zoom with your entire cohort.
 
 
-## Which of the following aspects of the cohort call work well? *
+### Which of the following aspects of the cohort call work well? *
 
 <Several answers can be selected>
 
@@ -76,7 +76,7 @@ Assignments and our bi-weekly cohort calls on Zoom with your entire cohort.
 * Other:
 
 
-## What should we improve in cohort calls? *
+### What should we improve in cohort calls? *
 
 <Several answers can be selected>
 
@@ -92,7 +92,7 @@ Assignments and our bi-weekly cohort calls on Zoom with your entire cohort.
 * Other:
 
 
-## Which of the following statements is true regarding the usefulness of the topics introduced at the OLS? *
+### Which of the following statements is true regarding the usefulness of the topics introduced at the OLS? *
 
 <One answer to select>
 
@@ -105,7 +105,7 @@ Assignments and our bi-weekly cohort calls on Zoom with your entire cohort.
 * I have NOT been able to use any concepts introduced at OLS so far
 
 
-## How much time do you spend on assignments on average? (not meetings) *
+### How much time do you spend on assignments on average? (not meetings) *
 
 <One answer to select>
 
@@ -118,7 +118,7 @@ Assignments and our bi-weekly cohort calls on Zoom with your entire cohort.
 * Other:
 
 
-## Which of the following mode of communication you find most effective? *
+### Which of the following mode of communication you find most effective? *
 
 <Several answers can be selected>
 
@@ -132,7 +132,7 @@ Assignments and our bi-weekly cohort calls on Zoom with your entire cohort.
 * Other:
 
 
-## How many cohort calls have been able to attend or watch in this round? *
+### How many cohort calls have been able to attend or watch in this round? *
 
 <Several answers can be selected>
 
@@ -145,17 +145,17 @@ Assignments and our bi-weekly cohort calls on Zoom with your entire cohort.
 * Other:
 
 
-## Anything else you would like to share with the organisers about the cohort call and assignments?
+### Anything else you would like to share with the organisers about the cohort call and assignments?
 
 <Free text>
 
 
-# Mentorship Meetings
+## Mentorship Meetings
 
 One on one meetings with your mentor
 
 
-## To what extent has your mentor meet your expectations? *
+### To what extent has your mentor meet your expectations? *
 
 <One answer to select>
 
@@ -168,7 +168,7 @@ One on one meetings with your mentor
 5. Completely
 
 
-## Would you like to work with your mentor in the future? *
+### Would you like to work with your mentor in the future? *
 
 <One answer to select>
 
@@ -179,11 +179,11 @@ One on one meetings with your mentor
 * Maybe
 
 
-## Who besides your mentor has helped you in your project?
+### Who besides your mentor has helped you in your project?
 
 <Free text>
 
 
-## Anything else you would like to share with the organisers about your mentorship experience?
+### Anything else you would like to share with the organisers about your mentorship experience?
 
 <Free text>
