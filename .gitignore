@@ -12,3 +12,4 @@
 /.quarto/
 .DS_Store
 _build
+results/images/
