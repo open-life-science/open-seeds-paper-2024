@@ -1,0 +1,22 @@
+name: open-seeds-paper-2024
+channels:
+- conda-forge
+- defaults
+dependencies:
+- jupyter
+- matplotlib
+- pandas
+- pygithub
+- pyyaml
+- pycountry
+- geopy
+- geopandas
+- plotly
+- notebook
+- ipywidgets
+- yt-dlp
+- python-kaleido
+- jupyter-book
+- wordcloud
+- seaborn
+- sphinxcontrib-mermaid
