@@ -4,4 +4,11 @@
 format: jb-book
 root: index
 parts:
+  - caption: Supplementary Data
+    chapters:
+    - file: supplementary/supplementary-data-1-application-template.md
+    - file: supplementary/supplementary-data-2-review-rubric.md
+    - file: supplementary/supplementary-data-3-mid-term-participant-survey.md
+    - file: supplementary/supplementary-data-4-post-cohort-participant-survey.md
+    - file: supplementary/supplementary-data-5-post-cohort-mentor-survey.md
 
