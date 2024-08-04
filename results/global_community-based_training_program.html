@@ -187,8 +187,11 @@
 
 
 
+
 <li class="toctree-l1"><a class="reference internal" href="training_materials_video_library.html">Training Materials and a Video Library</a></li>
+
 <li class="toctree-l1"><a class="reference internal" href="overview_microgrant_honoraria_process.html">Overview of Microgrant and Honoraria Process</a></li>
+
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Supplementary Data</span></p>
 <ul class="nav bd-sidenav">
@@ -392,18 +395,24 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">A Global Community-Based Training Program</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#cohort-stats">Cohort stats</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#development-path-of-people-in-the-different-roles-and-alumni">Development path of people in the different roles and Alumni</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#people-location">People location</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#projects">Projects</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cohorts">Cohorts</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#participants">Participants</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#keywords">Keywords</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">A Global Community-Based Training Program</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cohort-stats">Cohort stats</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#development-path-of-people-in-the-different-roles-and-alumni">Development path of people in the different roles and Alumni</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#people-location">People location</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#projects">Projects</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#participants">Participants</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#keywords">Keywords</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#graduation-stats">Graduation stats</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview-figure">Overview figure</a></li>
 </ul>
 </li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#fig-axs-plt-subplots-nrows-2-ncols-2-dpi-300">fig, axs = plt.subplots(nrows=2, ncols=2, dpi=300)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#a">A</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#b">B</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#c">c</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#d">D</a></li>
 </ul>
 
             </nav>
@@ -418,11 +427,10 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="a-global-community-based-training-program">
 <h1>A Global Community-Based Training Program<a class="headerlink" href="#a-global-community-based-training-program" title="Link to this heading">#</a></h1>
-<p>Since 2020, the OLS community has run 8 cohorts successfully with the engagement of over 500 international community members.</p>
+<p>From 2020 until 2024, 8 cohorts (2 per year) have been delivered, reaching 386 mentees from 6 continents, across 55 low- and middle- (LMIC), and high-income countries (HIC). Each cohort has supported an average of 29.75 projects (median = 30.5, min = 20, max = 37; from 8 cohorts), with some projects led individually and some co-developed by groups. Overall, 238 projects, each led by either individuals or teams of collaborators (median of 1.75 mentees per group project). The projects cover various topics (500+ provided keywords) with Community, Open Science, Training and Education, Open source, Reproducibility, Data Science, Machine Learning, Bioinformatics, and AI in the top 10 areas of interest. 79% of the projects graduated (94% during a collaboration). From the projects who did not graduated, 1 project came back in 4 cohorts before graduated, .. disqualified, … finished the program but did not attend graduation call, … did not attend graduation call,  … did not engage,  … did not finished because of personal circumstances beyond their control, … requested to discontinue.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">geopandas</span>
-<span class="kn">import</span> <span class="nn">geodatasets</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
@@ -431,31 +439,17 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">geopandas</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">geodatasets</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;geodatasets&#39;
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cohort_nb</span> <span class="o">=</span> <span class="mi">9</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">baseurl</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/open-life-science/open-life-science.github.io/main/_data/artifacts/openseeds/&quot;</span>
-<span class="n">cohort_nb</span> <span class="o">=</span> <span class="mi">9</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">people_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">baseurl</span><span class="si">}</span><span class="s2">people.csv&quot;</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">people_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">Path</span><span class="p">(</span><span class="s2">&quot;../data/people.csv&quot;</span><span class="p">),</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -467,14 +461,29 @@ document.write(`
 <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;role&quot;</span><span class="p">,</span> <span class="s2">&quot;participant&quot;</span><span class="p">,</span> <span class="s2">&quot;mentor&quot;</span><span class="p">,</span> <span class="s2">&quot;expert&quot;</span><span class="p">,</span> <span class="s2">&quot;speaker&quot;</span><span class="p">,</span> <span class="s2">&quot;facilitator&quot;</span><span class="p">,</span> <span class="s2">&quot;organizer&quot;</span><span class="p">]:</span>
     <span class="n">role</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span>
     <span class="n">roles</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">role</span><span class="p">)</span>
-    <span class="n">roles_df</span><span class="p">[</span><span class="n">role</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">baseurl</span><span class="si">}</span><span class="s2">/roles/</span><span class="si">{</span><span class="n">r</span><span class="si">}</span><span class="s2">.csv&quot;</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">roles_df</span><span class="p">[</span><span class="n">role</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">Path</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;../data/roles/</span><span class="si">{</span><span class="n">r</span><span class="si">}</span><span class="s2">.csv&quot;</span><span class="p">),</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="cohort-stats">
-<h1>Cohort stats<a class="headerlink" href="#cohort-stats" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">project_df</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">Path</span><span class="p">(</span><span class="s2">&quot;../data/projects.csv&quot;</span><span class="p">),</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">na_filter</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">assign</span><span class="p">(</span>
+        <span class="n">participants</span><span class="o">=</span><span class="k">lambda</span> <span class="n">df</span><span class="p">:</span> <span class="n">df</span><span class="o">.</span><span class="n">participants</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;, &quot;</span><span class="p">),</span>
+        <span class="n">participantNb</span><span class="o">=</span><span class="k">lambda</span> <span class="n">df</span><span class="p">:</span> <span class="n">df</span><span class="o">.</span><span class="n">participants</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">len</span><span class="p">(),</span>
+        <span class="n">mentors</span><span class="o">=</span><span class="k">lambda</span> <span class="n">df</span><span class="p">:</span> <span class="n">df</span><span class="o">.</span><span class="n">mentors</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;, &quot;</span><span class="p">),</span>
+        <span class="n">keywords</span><span class="o">=</span><span class="k">lambda</span> <span class="n">df</span><span class="p">:</span> <span class="n">df</span><span class="o">.</span><span class="n">keywords</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;, &quot;</span><span class="p">),</span>
+        <span class="n">cohort</span><span class="o">=</span><span class="k">lambda</span> <span class="n">df</span><span class="p">:</span> <span class="s2">&quot;OLS-&quot;</span> <span class="o">+</span> <span class="n">df</span><span class="o">.</span><span class="n">cohort</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">),</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="cohort-stats">
+<h2>Cohort stats<a class="headerlink" href="#cohort-stats" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">red_roles</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Participant&quot;</span><span class="p">,</span> <span class="s2">&quot;Mentor&quot;</span><span class="p">,</span> <span class="s2">&quot;Facilitator&quot;</span><span class="p">,</span> <span class="s2">&quot;Speaker&quot;</span><span class="p">,</span> <span class="s2">&quot;Expert&quot;</span><span class="p">]</span>
@@ -596,8 +605,8 @@ document.write(`
 </div></div></div>
 </div>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="development-path-of-people-in-the-different-roles-and-alumni">
-<h1>Development path of people in the different roles and Alumni<a class="headerlink" href="#development-path-of-people-in-the-different-roles-and-alumni" title="Link to this heading">#</a></h1>
+<section id="development-path-of-people-in-the-different-roles-and-alumni">
+<h2>Development path of people in the different roles and Alumni<a class="headerlink" href="#development-path-of-people-in-the-different-roles-and-alumni" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cohorts</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">role_count_df</span><span class="o">.</span><span class="n">index</span><span class="p">)]</span>
@@ -636,6 +645,12 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_1914/1411840461.py:33: FutureWarning: Setting an item of incompatible dtype is deprecated and will raise an error in a future version of pandas. Value &#39;3.333333333333333&#39; has dtype incompatible with int64, please explicitly cast to a compatible dtype first.
+  role_flow_df.at[index, &quot;value&quot;] += value
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -670,7 +685,7 @@ document.write(`
 
 <span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span>
     <span class="n">font_size</span><span class="o">=</span><span class="mi">18</span><span class="p">,</span>
-    <span class="n">width</span><span class="o">=</span><span class="mi">950</span><span class="p">,</span>
+    <span class="n">width</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span>
     <span class="n">height</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span>
     <span class="n">margin</span><span class="o">=</span><span class="n">go</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">Margin</span><span class="p">(</span>
         <span class="n">l</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="c1">#left margin</span>
@@ -681,6 +696,7 @@ document.write(`
 <span class="p">)</span>
 
 <span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">write_image</span><span class="p">(</span><span class="s2">&quot;images/flow.png&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -705,9 +721,9 @@ document.write(`
         });
         }
         </script>
-        </div><div class="output text_html"><div>                            <div id="6e7d8d80-520b-411c-a1af-931991218e30" class="plotly-graph-div" style="height:400px; width:950px;"></div>            <script type="text/javascript">                require(["plotly"], function(Plotly) {                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("6e7d8d80-520b-411c-a1af-931991218e30")) {                    Plotly.newPlot(                        "6e7d8d80-520b-411c-a1af-931991218e30",                        [{"arrangement":"snap","link":{"source":[0,0,0,0,0,0,1,1,1,1,1,1,2,2,2,2,2,2,3,3,3,3,3,3,4,4,4,4,4,4,5,5,5,5,5,5],"target":[6,7,8,9,10,11,6,7,8,9,10,11,6,7,8,9,10,11,6,7,8,9,10,11,6,7,8,9,10,11,6,7,8,9,10,11],"value":[12.333333333333332,38.666666666666664,13.333333333333332,4.0,22.333333333333336,256.0,5.416666666666666,59.47857142857143,3.5,14.011904761904761,39.519047619047626,90.0,1.75,6.499999999999999,10.0,0.5,1.9999999999999998,9.0,2.1666666666666665,11.978571428571428,1.25,14.511904761904763,26.26904761904762,67.0,2.083333333333333,41.128571428571426,2.0,18.378571428571426,70.37857142857143,140.0,0.0,0.0,0.0,0.0,0.0,0.0]},"node":{"color":["#3182bd","#fd8d3c","#a1d99b","#dadaeb","#d9d9d9","grey","#3182bd","#fd8d3c","#a1d99b","#dadaeb","#d9d9d9","grey"],"label":["Participant","Mentor","Facilitator","Speaker","Expert","Alumni","Participant","Mentor","Facilitator","Speaker","Expert","Alumni"],"line":{"color":"black","width":0.5},"pad":15,"thickness":20},"type":"sankey"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"font":{"size":18},"width":950,"height":400,"margin":{"b":20,"l":10,"r":10,"t":20}},                        {"responsive": true}                    ).then(function(){
+        </div><div class="output text_html"><div>                            <div id="7ca56998-eefa-4f7a-b8ef-d122c58f2cae" class="plotly-graph-div" style="height:400px; width:800px;"></div>            <script type="text/javascript">                require(["plotly"], function(Plotly) {                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("7ca56998-eefa-4f7a-b8ef-d122c58f2cae")) {                    Plotly.newPlot(                        "7ca56998-eefa-4f7a-b8ef-d122c58f2cae",                        [{"arrangement":"snap","link":{"source":[0,0,0,0,0,0,1,1,1,1,1,1,2,2,2,2,2,2,3,3,3,3,3,3,4,4,4,4,4,4,5,5,5,5,5,5],"target":[6,7,8,9,10,11,6,7,8,9,10,11,6,7,8,9,10,11,6,7,8,9,10,11,6,7,8,9,10,11,6,7,8,9,10,11],"value":[12.333333333333332,38.666666666666664,13.333333333333332,4.0,22.333333333333336,256.0,5.416666666666666,59.47857142857143,3.5,14.011904761904761,39.519047619047626,90.0,1.75,6.499999999999999,10.0,0.5,1.9999999999999998,9.0,2.1666666666666665,11.978571428571428,1.25,14.511904761904763,26.26904761904762,67.0,2.083333333333333,41.128571428571426,2.0,18.378571428571426,70.37857142857143,140.0,0.0,0.0,0.0,0.0,0.0,0.0]},"node":{"color":["#3182bd","#fd8d3c","#a1d99b","#dadaeb","#d9d9d9","grey","#3182bd","#fd8d3c","#a1d99b","#dadaeb","#d9d9d9","grey"],"label":["Participant","Mentor","Facilitator","Speaker","Expert","Alumni","Participant","Mentor","Facilitator","Speaker","Expert","Alumni"],"line":{"color":"black","width":0.5},"pad":15,"thickness":20},"type":"sankey"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"font":{"size":18},"width":800,"height":400,"margin":{"b":20,"l":10,"r":10,"t":20}},                        {"responsive": true}                    ).then(function(){
                             
-var gd = document.getElementById('6e7d8d80-520b-411c-a1af-931991218e30');
+var gd = document.getElementById('7ca56998-eefa-4f7a-b8ef-d122c58f2cae');
 var x = new MutationObserver(function (mutations, observer) {{
         var display = window.getComputedStyle(gd).display;
         if (!display || display === 'none') {{
@@ -729,7 +745,55 @@ if (outputEl) {{
     x.observe(outputEl, {childList: true});
 }}
 
-                        })                };                });            </script>        </div></div></div>
+                        })                };                });            </script>        </div></div><div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">8</span><span class="p">],</span> <span class="n">line</span> <span class="mi">43</span>
+<span class="g g-Whitespace">     </span><span class="mi">30</span> <span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span>
+<span class="g g-Whitespace">     </span><span class="mi">31</span>     <span class="n">font_size</span><span class="o">=</span><span class="mi">18</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">32</span>     <span class="n">width</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">39</span>     <span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">40</span> <span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">42</span> <span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="ne">---&gt; </span><span class="mi">43</span> <span class="n">fig</span><span class="o">.</span><span class="n">write_image</span><span class="p">(</span><span class="s2">&quot;images/flow.png&quot;</span><span class="p">)</span>
+
+<span class="nn">File /usr/share/miniconda/envs/open-seeds-paper-2024/lib/python3.12/site-packages/plotly/basedatatypes.py:3835,</span> in <span class="ni">BaseFigure.write_image</span><span class="nt">(self, *args, **kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3775</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">3776</span><span class="sd"> Convert a figure to a static image and write it to a file or writeable</span>
+<span class="g g-Whitespace">   </span><span class="mi">3777</span><span class="sd"> object</span>
+<span class="sd">   (...)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3831</span><span class="sd"> None</span>
+<span class="g g-Whitespace">   </span><span class="mi">3832</span><span class="sd"> &quot;&quot;&quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">3833</span> <span class="kn">import</span> <span class="nn">plotly.io</span> <span class="k">as</span> <span class="nn">pio</span>
+<span class="ne">-&gt; </span><span class="mi">3835</span> <span class="k">return</span> <span class="n">pio</span><span class="o">.</span><span class="n">write_image</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="nn">File /usr/share/miniconda/envs/open-seeds-paper-2024/lib/python3.12/site-packages/plotly/io/_kaleido.py:296,</span> in <span class="ni">write_image</span><span class="nt">(fig, file, format, scale, width, height, validate, engine)</span>
+<span class="g g-Whitespace">    </span><span class="mi">286</span>         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">287</span>             <span class="s2">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">288</span><span class="s2"> The &#39;file&#39; argument &#39;</span><span class="si">{file}</span><span class="s2">&#39; is not a string, pathlib.Path object, or file descriptor.</span>
+<span class="s2">   (...)</span>
+<span class="g g-Whitespace">    </span><span class="mi">291</span><span class="s2">             )</span>
+<span class="g g-Whitespace">    </span><span class="mi">292</span><span class="s2">         )</span>
+<span class="g g-Whitespace">    </span><span class="mi">293</span><span class="s2">     else:</span>
+<span class="g g-Whitespace">    </span><span class="mi">294</span><span class="s2">         # We previously succeeded in interpreting `file` as a pathlib object.</span>
+<span class="g g-Whitespace">    </span><span class="mi">295</span><span class="s2">         # Now we can use `write_bytes()`.</span>
+<span class="ne">--&gt; </span><span class="mi">296</span><span class="s2">         path.write_bytes(img_data)</span>
+
+<span class="nn">File /usr/share/miniconda/envs/open-seeds-paper-2024/lib/python3.12/pathlib.py:1036,</span> in <span class="ni">Path.write_bytes</span><span class="nt">(self, data)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1034</span><span class="s2"> # type-check for the buffer interface before truncating the file</span>
+<span class="g g-Whitespace">   </span><span class="mi">1035</span><span class="s2"> view = memoryview(data)</span>
+<span class="ne">-&gt; </span><span class="mi">1036</span><span class="s2"> with self.open(mode=&#39;wb&#39;) as f:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1037</span><span class="s2">     return f.write(view)</span>
+
+<span class="nn">File /usr/share/miniconda/envs/open-seeds-paper-2024/lib/python3.12/pathlib.py:1013,</span> in <span class="ni">Path.open</span><span class="nt">(self, mode, buffering, encoding, errors, newline)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1011</span><span class="s2"> if &quot;b&quot; not in mode:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1012</span><span class="s2">     encoding = io.text_encoding(encoding)</span>
+<span class="ne">-&gt; </span><span class="mi">1013</span><span class="s2"> return io.open(self, mode, buffering, encoding, errors, newline)</span>
+
+<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;images/flow.png&#39;
+</pre></div>
+</div>
+</div>
 </div>
 <p>Participants re-joining (%)</p>
 <div class="cell docutils container">
@@ -764,8 +828,8 @@ if (outputEl) {{
 </div>
 </div>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="people-location">
-<h1>People location<a class="headerlink" href="#people-location" title="Link to this heading">#</a></h1>
+<section id="people-location">
+<h2>People location<a class="headerlink" href="#people-location" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">map_fp</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;../data/naturalearth_lowres/naturalearth_lowres.shp&quot;</span><span class="p">)</span>
@@ -814,8 +878,7 @@ if (outputEl) {{
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">set_dpi</span><span class="p">(</span><span class="mi">300</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
 
 <span class="n">country_world_df</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
     <span class="n">column</span><span class="o">=</span><span class="s1">&#39;total&#39;</span><span class="p">,</span>
@@ -823,8 +886,6 @@ if (outputEl) {{
     <span class="n">legend</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
     <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;YlGn&#39;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_axis_off</span><span class="p">()</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;all-roles-all-cohorts.png&#39;</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">&#39;tight&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -833,29 +894,21 @@ if (outputEl) {{
 </div>
 </div>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="projects">
-<h1>Projects<a class="headerlink" href="#projects" title="Link to this heading">#</a></h1>
+<section id="projects">
+<h2>Projects<a class="headerlink" href="#projects" title="Link to this heading">#</a></h2>
+<p>Number of projects over all cohorts</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">baseurl</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/open-life-science/open-life-science.github.io/main/_data/artifacts/openseeds/&quot;</span>
-<span class="n">project_df</span> <span class="o">=</span> <span class="p">(</span>
-    <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">baseurl</span><span class="si">}</span><span class="s2">projects.csv&quot;</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">na_filter</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-    <span class="o">.</span><span class="n">assign</span><span class="p">(</span>
-        <span class="n">participants</span><span class="o">=</span><span class="k">lambda</span> <span class="n">df</span><span class="p">:</span> <span class="n">df</span><span class="o">.</span><span class="n">participants</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;, &quot;</span><span class="p">),</span>
-        <span class="n">participantNb</span><span class="o">=</span><span class="k">lambda</span> <span class="n">df</span><span class="p">:</span> <span class="n">df</span><span class="o">.</span><span class="n">participants</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">len</span><span class="p">(),</span>
-        <span class="n">mentors</span><span class="o">=</span><span class="k">lambda</span> <span class="n">df</span><span class="p">:</span> <span class="n">df</span><span class="o">.</span><span class="n">mentors</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;, &quot;</span><span class="p">),</span>
-        <span class="n">keywords</span><span class="o">=</span><span class="k">lambda</span> <span class="n">df</span><span class="p">:</span> <span class="n">df</span><span class="o">.</span><span class="n">keywords</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;, &quot;</span><span class="p">),</span>
-        <span class="n">cohort</span><span class="o">=</span><span class="k">lambda</span> <span class="n">df</span><span class="p">:</span> <span class="s2">&quot;OLS-&quot;</span> <span class="o">+</span> <span class="n">df</span><span class="o">.</span><span class="n">cohort</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">),</span>
-    <span class="p">)</span>
-<span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">project_df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>238
 </pre></div>
 </div>
 </div>
 </div>
-<section id="cohorts">
-<h2>Cohorts<a class="headerlink" href="#cohorts" title="Link to this heading">#</a></h2>
-<p>Number of projects over all cohorts</p>
-<p>len(project_df)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cohort_df</span> <span class="o">=</span> <span class="p">(</span>
@@ -903,9 +956,8 @@ Name: Total, dtype: float64
 </div>
 </div>
 </div>
-</section>
 <section id="participants">
-<h2>Participants<a class="headerlink" href="#participants" title="Link to this heading">#</a></h2>
+<h3>Participants<a class="headerlink" href="#participants" title="Link to this heading">#</a></h3>
 <p>Aggregating statistic of the number of participants per projects</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -927,9 +979,27 @@ Name: participantNb, dtype: float64
 </div>
 </div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
+<span class="n">project_df</span><span class="o">.</span><span class="n">participantNb</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span>
+    <span class="n">bins</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#139D3D&quot;</span>
+<span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Number of participants per projects&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 0, &#39;Number of participants per projects&#39;)
+</pre></div>
+</div>
+<img alt="../_images/cafd23bcb70585df4c4e7ba70a026aa4898a0d86f81aac26b7cc6eb468722fb6.png" src="../_images/cafd23bcb70585df4c4e7ba70a026aa4898a0d86f81aac26b7cc6eb468722fb6.png" />
+</div>
+</div>
 </section>
 <section id="keywords">
-<h2>Keywords<a class="headerlink" href="#keywords" title="Link to this heading">#</a></h2>
+<h3>Keywords<a class="headerlink" href="#keywords" title="Link to this heading">#</a></h3>
+<p>Number of keywords</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">keyword_df</span> <span class="o">=</span> <span class="p">(</span><span class="n">project_df</span>
@@ -964,6 +1034,32 @@ Name: participantNb, dtype: float64
     <span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Frequency&quot;</span><span class="p">})</span>
     <span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s2">&quot;Frequency&quot;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="p">)</span>
+<span class="nb">len</span><span class="p">(</span><span class="n">keyword_df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>588
+</pre></div>
+</div>
+</div>
+</div>
+<p>Top 10 of keywords by frequency</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">frec</span> <span class="o">=</span> <span class="n">keyword_df</span><span class="o">.</span><span class="n">Frequency</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span>
+<span class="n">frec</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">23</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">frec</span> <span class="o">=</span> <span class="n">keyword_df</span><span class="o">.</span><span class="n">Frequency</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">frec</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+
+<span class="ne">AttributeError</span>: &#39;dict&#39; object has no attribute &#39;head&#39;
 </pre></div>
 </div>
 </div>
@@ -975,15 +1071,20 @@ Name: participantNb, dtype: float64
 <span class="n">wc</span> <span class="o">=</span> <span class="n">WordCloud</span><span class="p">(</span>
     <span class="n">background_color</span><span class="o">=</span><span class="s2">&quot;rgba(255, 255, 255, 0)&quot;</span><span class="p">,</span>
     <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">,</span>
-    <span class="n">width</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span>
+    <span class="n">width</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span>
     <span class="n">height</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span>
 <span class="p">)</span>
 
 <span class="n">wordcloud</span> <span class="o">=</span> <span class="n">wc</span><span class="o">.</span><span class="n">generate_from_frequencies</span><span class="p">(</span><span class="n">frec</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">wc</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="s1">&#39;nearest&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_axis_off</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 </div>
+</section>
 </section>
 <section id="graduation-stats">
 <h2>Graduation stats<a class="headerlink" href="#graduation-stats" title="Link to this heading">#</a></h2>
@@ -994,21 +1095,11 @@ Name: participantNb, dtype: float64
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>79.41176470588235
-</pre></div>
-</div>
-</div>
 </div>
 <p>Percentage of graduated project within collaboration</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">100</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">project_df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;status == &quot;graduated&quot; and collaboration != &quot;&quot;&#39;</span><span class="p">))</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">project_df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;collaboration != &quot;&quot;&#39;</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>94.11764705882354
 </pre></div>
 </div>
 </div>
@@ -1034,44 +1125,59 @@ Name: participantNb, dtype: float64
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
-</pre></div>
-</div>
-</div>
 </div>
 </section>
 <section id="overview-figure">
 <h2>Overview figure<a class="headerlink" href="#overview-figure" title="Link to this heading">#</a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">set_dpi</span><span class="p">(</span><span class="mi">300</span><span class="p">)</span>
-
-<span class="c1"># A</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">wc</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s2">&quot;off&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">(</span><span class="n">pad</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-
-<span class="c1"># B</span>
-<span class="n">project_df</span><span class="o">.</span><span class="n">participantNb</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span>
-    <span class="n">bins</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#139D3D&quot;</span>
-<span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Number of participants per projects&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/6a4986d5c26230b8772166143dd83f458382bbf28812eaf7c5c61b63196b5e2d.png" src="../_images/6a4986d5c26230b8772166143dd83f458382bbf28812eaf7c5c61b63196b5e2d.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 0, &#39;Number of participants per projects&#39;)
-</pre></div>
-</div>
-<img alt="../_images/1c95e619f4df0cb1efa67edeee1aa3e952a3f079745b90e24ca424ed02b6ed7d.png" src="../_images/1c95e619f4df0cb1efa67edeee1aa3e952a3f079745b90e24ca424ed02b6ed7d.png" />
-</div>
-</div>
 </section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="fig-axs-plt-subplots-nrows-2-ncols-2-dpi-300">
+<h1>fig, axs = plt.subplots(nrows=2, ncols=2, dpi=300)<a class="headerlink" href="#fig-axs-plt-subplots-nrows-2-ncols-2-dpi-300" title="Link to this heading">#</a></h1>
+<p>#gs = fig.add_gridspec(2,2)
+ax1 = axs[0, 0]
+ax2 = axs[0, 1]#fig.add_subplot(gs[1, :])
+ax3 = axs[1, 0]#fig.add_subplot(gs[2, 0])
+ax4 = axs[1, 1]#fig.add_subplot(gs[2, 1])</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="a">
+<h1>A<a class="headerlink" href="#a" title="Link to this heading">#</a></h1>
+<p>country_world_df.plot(
+column=’total’,
+ax=ax1,
+legend=False,
+cmap=’YlGn’,
+figsize=(20, 10))
+ax1.set_axis_off()
+ax1.text(-0.1, 1.1, “A”, transform=ax1.transAxes, size=20, weight=’bold’)</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="b">
+<h1>B<a class="headerlink" href="#b" title="Link to this heading">#</a></h1>
+<p>with open(“images/flow.png”, “rb”) as f:
+image=plt.imread(f)
+ax2.imshow(image)
+ax2.set_axis_off()
+ax2.text(-0.1, 1.1, “B”, transform=ax2.transAxes, size=20, weight=’bold’)</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="c">
+<h1>c<a class="headerlink" href="#c" title="Link to this heading">#</a></h1>
+<p>ax3.imshow(wc, interpolation=’nearest’)
+ax3.set_axis_off()
+ax3.text(-0.1, 1.1, “C”, transform=ax3.transAxes, size=20, weight=’bold’)</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="d">
+<h1>D<a class="headerlink" href="#d" title="Link to this heading">#</a></h1>
+<p>project_df.participantNb.plot.hist(
+bins=8,
+ax=ax4,
+legend=False,
+color=”#139D3D”,
+figsize=(20, 10)
+)
+ax4.set_xlabel(“Number of participants per project”)
+ax4.set_ylabel(“Frequency”)
+ax4.text(-0.1, 1.1, “D”, transform=ax4.transAxes, size=20, weight=’bold’)</p>
+<p>fig.tight_layout()
+fig.savefig(Path(“../figures/figure-3-based_training_program.png”), bbox_inches=’tight’)</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -1138,18 +1244,24 @@ Name: participantNb, dtype: float64
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">A Global Community-Based Training Program</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#cohort-stats">Cohort stats</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#development-path-of-people-in-the-different-roles-and-alumni">Development path of people in the different roles and Alumni</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#people-location">People location</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#projects">Projects</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cohorts">Cohorts</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#participants">Participants</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#keywords">Keywords</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">A Global Community-Based Training Program</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cohort-stats">Cohort stats</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#development-path-of-people-in-the-different-roles-and-alumni">Development path of people in the different roles and Alumni</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#people-location">People location</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#projects">Projects</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#participants">Participants</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#keywords">Keywords</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#graduation-stats">Graduation stats</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview-figure">Overview figure</a></li>
 </ul>
 </li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#fig-axs-plt-subplots-nrows-2-ncols-2-dpi-300">fig, axs = plt.subplots(nrows=2, ncols=2, dpi=300)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#a">A</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#b">B</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#c">c</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#d">D</a></li>
 </ul>
 
   </nav></div>

@@ -18,23 +18,96 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-import geopandas
-import geodatasets
-import matplotlib.pyplot as plt
-import pandas as pd
-from pathlib import Path
-import plotly.graph_objects as go
-from wordcloud import WordCloud
+colors = {
+    "participant": "#3182bd",
+    "mentor": "#fd8d3c",
+    "expert": "#d9d9d9",
+    "speaker": "#dadaeb",
+    "facilitator": "#a1d99b",
+    "alumni": "grey"
+}
+label_df = pd.DataFrame({
+    "labels": [l.capitalize() for l in labels] * 2, 
+    "colors": [colors[l] for l in labels] * 2, 
+    "x": [0.1]*len(labels)+[0.9]*len(labels), 
+    "y": [0.1]*(len(labels)*2)})
+
+fig = go.Figure(data=[go.Sankey(
+    arrangement="snap",
+    node = dict(
+        pad = 15,
+        thickness = 20,
+        line = dict(color = "black", width = 0.5),
+        label = label_df.labels,
+        color = label_df.colors,
+    ),
+    link = dict(
+      source = [labels.index(e) for e in role_flow_df.source],
+      target = [labels.index(e)+len(labels) for e in role_flow_df.target],
+      value = role_flow_df.value
+  ))])
+
+fig.update_layout(
+    font_size=18,
+    width=800,
+    height=400,
+    margin=go.layout.Margin(
+        l=10, #left margin
+        r=10, #right margin
+        b=20, #bottom margin
+        t=20, #top margin
+    )
+)
+
+fig.show()
+fig.write_image("images/flow.png")
 ------------------
 
 
 [0;31m---------------------------------------------------------------------------[0m
-[0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
-Cell [0;32mIn[1], line 2[0m
-[1;32m      1[0m [38;5;28;01mimport[39;00m [38;5;21;01mgeopandas[39;00m
-[0;32m----> 2[0m [38;5;28;01mimport[39;00m [38;5;21;01mgeodatasets[39;00m
-[1;32m      3[0m [38;5;28;01mimport[39;00m [38;5;21;01mmatplotlib[39;00m[38;5;21;01m.[39;00m[38;5;21;01mpyplot[39;00m [38;5;28;01mas[39;00m [38;5;21;01mplt[39;00m
-[1;32m      4[0m [38;5;28;01mimport[39;00m [38;5;21;01mpandas[39;00m [38;5;28;01mas[39;00m [38;5;21;01mpd[39;00m
+[0;31mFileNotFoundError[0m                         Traceback (most recent call last)
+Cell [0;32mIn[8], line 43[0m
+[1;32m     30[0m fig[38;5;241m.[39mupdate_layout(
+[1;32m     31[0m     font_size[38;5;241m=[39m[38;5;241m18[39m,
+[1;32m     32[0m     width[38;5;241m=[39m[38;5;241m800[39m,
+[0;32m   (...)[0m
+[1;32m     39[0m     )
+[1;32m     40[0m )
+[1;32m     42[0m fig[38;5;241m.[39mshow()
+[0;32m---> 43[0m [43mfig[49m[38;5;241;43m.[39;49m[43mwrite_image[49m[43m([49m[38;5;124;43m"[39;49m[38;5;124;43mimages/flow.png[39;49m[38;5;124;43m"[39;49m[43m)[49m
 
-[0;31mModuleNotFoundError[0m: No module named 'geodatasets'
+File [0;32m/usr/share/miniconda/envs/open-seeds-paper-2024/lib/python3.12/site-packages/plotly/basedatatypes.py:3835[0m, in [0;36mBaseFigure.write_image[0;34m(self, *args, **kwargs)[0m
+[1;32m   3775[0m [38;5;250m[39m[38;5;124;03m"""[39;00m
+[1;32m   3776[0m [38;5;124;03mConvert a figure to a static image and write it to a file or writeable[39;00m
+[1;32m   3777[0m [38;5;124;03mobject[39;00m
+[0;32m   (...)[0m
+[1;32m   3831[0m [38;5;124;03mNone[39;00m
+[1;32m   3832[0m [38;5;124;03m"""[39;00m
+[1;32m   3833[0m [38;5;28;01mimport[39;00m [38;5;21;01mplotly[39;00m[38;5;21;01m.[39;00m[38;5;21;01mio[39;00m [38;5;28;01mas[39;00m [38;5;21;01mpio[39;00m
+[0;32m-> 3835[0m [38;5;28;01mreturn[39;00m [43mpio[49m[38;5;241;43m.[39;49m[43mwrite_image[49m[43m([49m[38;5;28;43mself[39;49m[43m,[49m[43m [49m[38;5;241;43m*[39;49m[43margs[49m[43m,[49m[43m [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mkwargs[49m[43m)[49m
+
+File [0;32m/usr/share/miniconda/envs/open-seeds-paper-2024/lib/python3.12/site-packages/plotly/io/_kaleido.py:296[0m, in [0;36mwrite_image[0;34m(fig, file, format, scale, width, height, validate, engine)[0m
+[1;32m    286[0m         [38;5;28;01mraise[39;00m [38;5;167;01mValueError[39;00m(
+[1;32m    287[0m [38;5;250m            [39m[38;5;124;03m"""[39;00m
+[1;32m    288[0m [38;5;124;03mThe 'file' argument '{file}' is not a string, pathlib.Path object, or file descriptor.[39;00m
+[0;32m   (...)[0m
+[1;32m    291[0m             )
+[1;32m    292[0m         )
+[1;32m    293[0m     [38;5;28;01melse[39;00m:
+[1;32m    294[0m         [38;5;66;03m# We previously succeeded in interpreting `file` as a pathlib object.[39;00m
+[1;32m    295[0m         [38;5;66;03m# Now we can use `write_bytes()`.[39;00m
+[0;32m--> 296[0m         [43mpath[49m[38;5;241;43m.[39;49m[43mwrite_bytes[49m[43m([49m[43mimg_data[49m[43m)[49m
+
+File [0;32m/usr/share/miniconda/envs/open-seeds-paper-2024/lib/python3.12/pathlib.py:1036[0m, in [0;36mPath.write_bytes[0;34m(self, data)[0m
+[1;32m   1034[0m [38;5;66;03m# type-check for the buffer interface before truncating the file[39;00m
+[1;32m   1035[0m view [38;5;241m=[39m [38;5;28mmemoryview[39m(data)
+[0;32m-> 1036[0m [38;5;28;01mwith[39;00m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43mopen[49m[43m([49m[43mmode[49m[38;5;241;43m=[39;49m[38;5;124;43m'[39;49m[38;5;124;43mwb[39;49m[38;5;124;43m'[39;49m[43m)[49m [38;5;28;01mas[39;00m f:
+[1;32m   1037[0m     [38;5;28;01mreturn[39;00m f[38;5;241m.[39mwrite(view)
+
+File [0;32m/usr/share/miniconda/envs/open-seeds-paper-2024/lib/python3.12/pathlib.py:1013[0m, in [0;36mPath.open[0;34m(self, mode, buffering, encoding, errors, newline)[0m
+[1;32m   1011[0m [38;5;28;01mif[39;00m [38;5;124m"[39m[38;5;124mb[39m[38;5;124m"[39m [38;5;129;01mnot[39;00m [38;5;129;01min[39;00m mode:
+[1;32m   1012[0m     encoding [38;5;241m=[39m io[38;5;241m.[39mtext_encoding(encoding)
+[0;32m-> 1013[0m [38;5;28;01mreturn[39;00m [43mio[49m[38;5;241;43m.[39;49m[43mopen[49m[43m([49m[38;5;28;43mself[39;49m[43m,[49m[43m [49m[43mmode[49m[43m,[49m[43m [49m[43mbuffering[49m[43m,[49m[43m [49m[43mencoding[49m[43m,[49m[43m [49m[43merrors[49m[43m,[49m[43m [49m[43mnewline[49m[43m)[49m
+
+[0;31mFileNotFoundError[0m: [Errno 2] No such file or directory: 'images/flow.png'
 

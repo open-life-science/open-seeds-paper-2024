@@ -39,6 +39,6 @@ Here is a preview of the cell contents:
 -------------------
 ['%%capture', 'ydl_opts = {}', 'URL = "https://www.youtube.com/c/OpenLifeSci"', 'with yt_dlp.YoutubeDL(ydl_opts) as ydl:', '    info = ydl.extract_info(URL, download=False)']
 ...
-['    pd.DataFrame(videos)', '    .assign(Duration=lambda df: df.duration/60)', '    .drop(columns=["duration"])', '    .rename(columns=str.capitalize)', ')']
+['    .drop(columns=["duration"])', '    .rename(columns=str.capitalize)', ')', '', 'openseeds_yt_df = yt_stat_df.query("Title.str.contains(\'OLS-\')",engine="python")']
 -------------------
 
