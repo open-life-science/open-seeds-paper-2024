@@ -4,11 +4,15 @@
 format: jb-book
 root: index
 parts:
-  - caption: Results
+  - caption: Long manuscript
     chapters:
-    - file: results/global_community-based_training_program
-    - file: results/training_materials_video_library
-    - file: results/overview_microgrant_honoraria_process
+    - file: results/results
+      sections:
+        - file: results/global_community-based_training_program
+        - file: results/training_materials_video_library
+        - file: results/overview_microgrant_honoraria_process
+        - file: results/participants_mentors_feedback
+        - file: results/case_studies_impact_stories
   - caption: Supplementary Data
     chapters:
     - file: supplementary/supplementary-data-1-application-template
@@ -16,4 +20,12 @@ parts:
     - file: supplementary/supplementary-data-3-mid-term-participant-survey
     - file: supplementary/supplementary-data-4-post-cohort-participant-survey
     - file: supplementary/supplementary-data-5-post-cohort-mentor-survey
+    - file: supplementary/supplementary-data-6-mentee-impact-1
+    - file: supplementary/supplementary-data-7-mentee-impact-2
+    - file: supplementary/supplementary-data-8-mentee-impact-3
+    - file: supplementary/supplementary-data-9-mentor-impact-1
+    - file: supplementary/supplementary-data-10-mentor-impact-2
+    - file: supplementary/supplementary-data-11-community-incubating-impact-1
+    - file: supplementary/supplementary-data-12-community-incubating-impact-2
+    - file: supplementary/supplementary-data-13-community-incubating-impact-3
 

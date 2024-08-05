@@ -1,0 +1,7 @@
+# Supplementary Data 8: Impact on Mentee Case Study - Mapping Open Science in Latin America: A Community Organization Perspective
+
+In Open Seeds OLS-7, Patricia A. Loto, Jesica Formoso and Irene Vazano, members of MetaDocencia (a non-profit organization in Latin America) developed the project titled "Mapping Open Science Communities, Organizations, and Events across Latin America". The primary objective was to establish a collaborative repository of open science resources in Spanish, encompassing funding opportunities, communities, workshops, and other relevant materials.
+
+The project started at a community meeting in Argentina, which was continued by the MetaDocencia team through their participation in Open Seeds. The team shared their work openly, adopted a reproducible workflow to manage their tools and data, supported contributions from online contributors and invited feedback from open science practitioners who had previously done this kind of mapping work. The project has attracted substantial attention from researchers and funders who are supporting the adoption of open science in Latin America. As of 2024, the project has received funding as one of the open science initiatives in MetaDocencia (https://www.metadocencia.org/proyecto/mapeo-comunidades/).
+
+This case study demonstrates the impact of the Open Seeds in strengthening community capacity, which in this case supported continuation of an open science project in Latin America. 

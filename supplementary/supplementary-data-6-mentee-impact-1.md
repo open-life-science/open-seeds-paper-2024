@@ -1,0 +1,7 @@
+# Supplementary Data 6: Impact on Mentee Case Study - Soil Biophysics Laboratory:_ An Early-Career Researcher Perspective_
+
+In Open Seeds OLS-6 (2023), Dr. Sara Acevedo and Carolina Giraldo, members of the Soil Biophysics Laboratory (Pontificia Universidad Católica, Chile) joined the Open Seeds program. Although the members of the laboratory already used the programming language R for data analysis, they did not share their data analysis code openly. Furthermore, since soil physicists are unacquainted with the functionalities of FAIR software and data, they had not already shared in a findable, accessible, reusable, and reproducible manner. Application to open, reproducible and FAIR approaches in soil hydrologic research can have a positive impact on this scientific domain [[https://doi.org/10.5194/hess-26-647-2022](https://doi.org/10.5194/hess-26-647-2022)].
+
+Through their participation in Open Seeds, the laboratory members combined their programming expertise with open source and reproducibility approaches, in developing an R package called InfiltrodiscR [[https://doi.org/10.5281/zenodo.8001894](https://doi.org/10.5281/zenodo.8001894)]. At the time of writing this paper, a manuscript detailing the use of the package is under review, with code shared online via GitHub under X Licence.
+
+This case study demonstrates the impact of the OLS program in improving reproducibility practices and interests in adopting open science in the soil science community.
