@@ -57,7 +57,7 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'results/process_feedback';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'results/participants_mentors_feedback';</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -271,7 +271,7 @@
       
       
       
-      <li><a href="https://github.com/open-life-science/open-seeds-paper-2024/issues/new?title=Issue%20on%20page%20%2Fresults/process_feedback.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/open-life-science/open-seeds-paper-2024/issues/new?title=Issue%20on%20page%20%2Fresults/participants_mentors_feedback.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -301,7 +301,7 @@
       
       
       
-      <li><a href="../_sources/results/process_feedback.ipynb" target="_blank"
+      <li><a href="../_sources/results/participants_mentors_feedback.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -522,10 +522,12 @@ document.write(`
 </div>
 <section id="participants-feedback-to-cohort-survey">
 <h2>Participants’ Feedback to Cohort Survey<a class="headerlink" href="#participants-feedback-to-cohort-survey" title="Link to this heading">#</a></h2>
-<p>96.8% of participants (mean over the 8 cohorts; min = 91.9, max = 100) who responded to the feedback survey recommend Open Seeds to others. 77.3% of respondents found that the mentoring calls were always useful (mean over the 8 cohorts; min = 63.6, max=87.1). Regarding the cohort calls, 46.4% of respondents found them always useful (min = 38.4, max=61.1) and 42.1% mostly useful (min = 30.6, max=50). Topics under open science, project management, community interactions, mental health, tooling for collaboration and project design approaches were considered important to the participants’ open science journey. The program helped mentees work openly and to meet most of their project goals they intended to meet during their participation in the cohort. 22% of respondents indicated they would like to return as mentors (min=11.9, max=28.3), 12.2% as experts (min=3, max=21.9), and 9.1% as facilitators (min=0, max=18.9). Around 30% of graduates re-joined the subsequent cohort in different roles (Figure 3B). Even when not actively engaging with the ongoing program, participants from previous cohorts remain engaged via the community Slack workspace, sharing opportunities, responding to questions or accessing information shared by others.</p>
+<p>96.8% of participants (mean over the 8 cohorts; min = 91.9, max = 100) who responded to the feedback survey (number of answers over the 8 cohorts; mid-cohort: mean=20.5, min=11, max=33; post-cohort: mean=28.6, min=19, max=37) would recommend Open Seeds to others. 77.3% of respondents found that the mentoring calls were always useful (mean over the 8 cohorts; min = 63.6, max=87.1). Regarding the cohort calls, 46.4% of respondents found them always useful (min = 38.4, max=61.1) and 42.1% mostly useful (min = 30.6, max=50). Topics under open science, project management, community interactions, mental health, tooling for collaboration and project design approaches were considered important to the participants’ open science journey. The program helped mentees work openly and to meet most of their project goals they intended to meet during their participation in the cohort. 22% of respondents indicated they would like to return as mentors (min=11.9, max=28.3), 12.2% as experts (min=3, max=21.9), and 9.1% as facilitators (min=0, max=18.9). Around 30% of graduates re-joined the subsequent cohort in different roles. Even when not actively engaging with the ongoing program, participants from previous cohorts remain engaged via the community Slack workspace, sharing opportunities, responding to questions or accessing information shared by others.</p>
+<p>Statistic of the number of answer for the mid-cohort survey</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">participant_mid_df</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">answers</span> <span class="o">=</span> <span class="p">{}</span>
 <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">):</span>
     <span class="n">participant_mid_df</span><span class="p">[</span><span class="n">c</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">Path</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;../data/participant_feedback/mid_cohort/OLS-</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s2">.csv&quot;</span><span class="p">))</span>
         <span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">how</span><span class="o">=</span><span class="s1">&#39;all&#39;</span><span class="p">)</span>
@@ -536,25 +538,71 @@ document.write(`
         <span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;I have attended 1-2 cohort calls, and watched the missed call on YouTube&quot;</span><span class="p">,</span> <span class="s2">&quot;I have attended 1-2 cohort calls and watched the missed call on YouTube&quot;</span><span class="p">,</span> <span class="n">regex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
         <span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;I watched all the cohort calls on YouTube, but have not attended any call so far&quot;</span><span class="p">,</span> <span class="s2">&quot;I watched all the cohort calls on YouTube but have not attended any call so far&quot;</span><span class="p">,</span> <span class="n">regex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
     <span class="p">)</span>
+    <span class="n">answers</span><span class="p">[</span><span class="n">c</span><span class="p">]</span> <span class="o">=</span> <span class="n">participant_mid_df</span><span class="p">[</span><span class="n">c</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([</span><span class="n">answers</span><span class="p">])</span><span class="o">.</span><span class="n">transpose</span><span class="p">()</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>8.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>20.500000</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>8.618916</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>11.000000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>13.750000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>19.000000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>25.250000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>33.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">participant_mid_q10</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="n">other_answer</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">col</span> <span class="o">=</span> <span class="s2">&quot;Would you like to work with your mentor in future?&quot;</span>
-<span class="n">answers</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Yes&quot;</span><span class="p">,</span> <span class="s2">&quot;No&quot;</span><span class="p">,</span> <span class="s2">&quot;Maybe&quot;</span><span class="p">]</span>
-<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">participant_mid_df</span><span class="p">:</span>
-    <span class="n">participant_mid_q10</span><span class="p">[</span><span class="n">c</span><span class="p">],</span> <span class="n">oa</span> <span class="o">=</span> <span class="n">get_question_possible_answers_counts</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="n">participant_mid_df</span><span class="p">[</span><span class="n">c</span><span class="p">],</span> <span class="n">answers</span><span class="p">)</span>
-    <span class="n">other_answer</span> <span class="o">+=</span> <span class="n">oa</span>
-<span class="n">participant_mid_q10_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">participant_mid_q10</span><span class="p">)</span>
-<span class="n">participant_mid_q10_df</span> <span class="o">=</span> <span class="mi">100</span> <span class="o">*</span> <span class="n">participant_mid_q10_df</span> <span class="o">/</span> <span class="n">participant_mid_q10_df</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
+<p>Statistic of the number of answer for the post-cohort survey</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">participant_df</span> <span class="o">=</span> <span class="p">{}</span>
@@ -615,6 +663,7 @@ document.write(`
         <span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;Maybe in OLS-7?&quot;</span><span class="p">,</span> <span class="s2">&quot;I would take a break but please keep me informed about the next cohort&quot;</span><span class="p">,</span> <span class="n">regex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>   
     <span class="p">)</span>
     <span class="n">answers</span><span class="p">[</span><span class="n">c</span><span class="p">]</span> <span class="o">=</span> <span class="n">participant_df</span><span class="p">[</span><span class="n">c</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([</span><span class="n">answers</span><span class="p">])</span><span class="o">.</span><span class="n">transpose</span><span class="p">()</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -625,30 +674,71 @@ document.write(`
 &lt;&gt;:15: SyntaxWarning: invalid escape sequence &#39;\(&#39;
 &lt;&gt;:31: SyntaxWarning: invalid escape sequence &#39;\(&#39;
 &lt;&gt;:33: SyntaxWarning: invalid escape sequence &#39;\(&#39;
-/tmp/ipykernel_2102/3600814454.py:15: SyntaxWarning: invalid escape sequence &#39;\(&#39;
+/tmp/ipykernel_2010/1106160560.py:15: SyntaxWarning: invalid escape sequence &#39;\(&#39;
   .replace(&quot;Tooling and Roadmapping \(open canvas, project vision etc\.\)&quot;, &quot;Project Roadmapping, Open Canvas&quot;, regex=True)
-/tmp/ipykernel_2102/3600814454.py:31: SyntaxWarning: invalid escape sequence &#39;\(&#39;
+/tmp/ipykernel_2010/1106160560.py:31: SyntaxWarning: invalid escape sequence &#39;\(&#39;
   .replace(&quot;Final presentation call \(open and live streamed\)&quot;, &quot;Graduations&quot;, regex=True)
-/tmp/ipykernel_2102/3600814454.py:33: SyntaxWarning: invalid escape sequence &#39;\(&#39;
+/tmp/ipykernel_2010/1106160560.py:33: SyntaxWarning: invalid escape sequence &#39;\(&#39;
   .replace(&quot;Tooling and Roadmapping \(\)&quot;, &quot;Project Roadmapping, Open Canvas&quot;, regex=True)
 </pre></div>
 </div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">set_dpi</span><span class="p">(</span><span class="mi">300</span><span class="p">)</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">participant_mid_q10_df</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;Greens&#39;</span><span class="p">,</span> <span class="n">linewidths</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="s1">&#39;horizontal&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/8fc4cd40a0916ab96558a3c6a001d91a8ab54eccf979121b61afb88af7e20f34.png" src="../_images/8fc4cd40a0916ab96558a3c6a001d91a8ab54eccf979121b61afb88af7e20f34.png" />
-</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>8.00000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>28.62500</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>6.52331</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>19.00000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>22.75000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>30.50000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>32.75000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>37.00000</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <section id="ols-is-helping-me-work-openly">
 <h3>“OLS is helping me work openly”<a class="headerlink" href="#ols-is-helping-me-work-openly" title="Link to this heading">#</a></h3>
@@ -674,48 +764,6 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <img alt="../_images/378acae88c678a2111a28f18210d69e9bfc5d04983b938ed81b20a8c36ae4173.png" src="../_images/378acae88c678a2111a28f18210d69e9bfc5d04983b938ed81b20a8c36ae4173.png" />
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">set_dpi</span><span class="p">(</span><span class="mi">300</span><span class="p">)</span>
-<span class="n">participant_mid_q10_df</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">colormap</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="s1">&#39;participant_colormap&#39;</span><span class="p">])</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Percentage of answers&#39;</span><span class="p">)</span>
-<span class="n">t</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="n">col</span><span class="p">)</span>
-<span class="c1">#plt.savefig(&#39;../&#39;, bbox_inches=&#39;tight&#39;)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/b1672c3ca1a002c52ea2308ba94ebe4ab32235887b45d80b7aa486b4257016fe.png" src="../_images/b1672c3ca1a002c52ea2308ba94ebe4ab32235887b45d80b7aa486b4257016fe.png" />
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">set_dpi</span><span class="p">(</span><span class="mi">300</span><span class="p">)</span>
-<span class="n">participant_mid_q10_df</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="s1">&#39;participants&#39;</span><span class="p">])</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Mean percentage of answers&#39;</span><span class="p">)</span>
-<span class="n">t</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="n">col</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/0d75abefb56b6c030f8bbdd4b64ce83a69df4cd030247cc50b1120609da88002.png" src="../_images/0d75abefb56b6c030f8bbdd4b64ce83a69df4cd030247cc50b1120609da88002.png" />
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">set_dpi</span><span class="p">(</span><span class="mi">300</span><span class="p">)</span>
-<span class="n">participant_mid_q10_df</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">pie</span><span class="p">()</span>
-<span class="n">t</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="n">col</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/90184ced46f3195de5c1b58ea27941b60939fbe06f4bf8a1b6e3f66b28cb3014.png" src="../_images/90184ced46f3195de5c1b58ea27941b60939fbe06f4bf8a1b6e3f66b28cb3014.png" />
 </div>
 </div>
 </section>
@@ -1438,6 +1486,8 @@ document.write(`
 </section>
 <section id="mentors-feedback-to-cohort-survey">
 <h2>Mentors’ Feedback to Cohort Survey<a class="headerlink" href="#mentors-feedback-to-cohort-survey" title="Link to this heading">#</a></h2>
+<p>Mentors in Open Seeds are offered onboarding, training, templates for guiding their meetings and private Slack channels to interact with each other. 50.8% of mentors (mean over the 8 cohorts; min=30.8, max=70.4) who answered the feedback survey (over the 8 cohort, mean=20, min=8, max=26) reported that they found the mentor training and support offered in the cohort adequate and 32.8% reported that they enjoyed their experience and did not find their experience overwhelming (min=23.1, max=41.5). Only about 5% reported feeling overwhelmed by their responsibilities with many providing helpful recommendations to improve support and training to help better manage their responsibilities in Open Seeds. Around 80% of the mentors found the mentoring calls with their mentees mostly or always constructive and more than 50% thought their mentees were able to engage effectively with OLS throughout the program. 50% of mentors expressed their interest in returning as experts, speakers or mentors, with most of them effectively coming back in one of the roles in the subsequent cohort.</p>
+<p>Statistic of the number of answer</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mentor_df</span> <span class="o">=</span> <span class="p">{}</span>
@@ -1460,21 +1510,68 @@ document.write(`
         <span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;Maybe in OLS-7?&quot;</span><span class="p">,</span> <span class="s2">&quot;I would take a break but please keep me informed about the next cohort&quot;</span><span class="p">,</span> <span class="n">regex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
     <span class="p">)</span>
     <span class="n">answers</span><span class="p">[</span><span class="n">c</span><span class="p">]</span> <span class="o">=</span> <span class="n">mentor_df</span><span class="p">[</span><span class="n">c</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">answers</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([</span><span class="n">answers</span><span class="p">])</span><span class="o">.</span><span class="n">transpose</span><span class="p">()</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{1: 8, 2: 23, 3: 26, 4: 18, 5: 21, 6: 19, 7: 26}
-</pre></div>
-</div>
-</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>7.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>20.142857</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>6.202918</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>8.000000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>18.500000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>21.000000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>24.500000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>26.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <section id="how-were-your-overall-mentorship-training-and-support-experience-in-ols">
 <h3>“How were your overall mentorship training and support experience in OLS?”<a class="headerlink" href="#how-were-your-overall-mentorship-training-and-support-experience-in-ols" title="Link to this heading">#</a></h3>
